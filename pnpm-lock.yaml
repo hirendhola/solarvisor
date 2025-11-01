@@ -92,6 +92,8 @@ importers:
         specifier: 5.9.2
         version: 5.9.2
 
+  packages/config: {}
+
   packages/eslint-config:
     devDependencies:
       '@eslint/js':
@@ -127,6 +129,8 @@ importers:
       typescript-eslint:
         specifier: ^8.40.0
         version: 8.40.0(eslint@9.38.0)(typescript@5.9.2)
+
+  packages/pipeline: {}
 
   packages/typescript-config: {}
 

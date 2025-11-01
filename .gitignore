@@ -1,10 +1,76 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
+# ============================================
 # Dependencies
-node_modules
-.pnp
+# ============================================
+node_modules/
+.pnp/
 .pnp.js
 
+# Python virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# ============================================
+# Python
+# ============================================
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Distribution / packaging
+dist/
+build/
+*.egg-info/
+*.egg
+wheels/
+pip-wheel-metadata/
+
+# Testing
+.pytest_cache/
+.coverage
+coverage/
+htmlcov/
+.tox/
+*.cover
+
+# Jupyter Notebook
+.ipynb_checkpoints/
+*.ipynb_checkpoints/
+
+# ============================================
+# Data & Models (CRITICAL - DON'T COMMIT!)
+# ============================================
+# Project data directories
+
+# Model weights and checkpoints
+models/weights/
+!models/weights/.gitkeep
+*.pth
+*.pt
+*.h5
+*.onnx
+*.pb
+checkpoints/
+
+# Large image files
+*.jpg
+*.jpeg
+*.png
+*.tif
+*.tiff
+*.gif
+!docs/**/*.png
+!assets/**/*.{png,jpg}
+!README*.png
+
+# ============================================
+# Environment & Secrets
+# ============================================
 # Local env files
 .env
 .env.local
@@ -12,27 +78,107 @@ node_modules
 .env.test.local
 .env.production.local
 
-# Testing
-coverage
+# API keys and secrets
+*.key
+*.pem
+secrets/
+config/secrets.json
 
-# Turbo
-.turbo
-
-# Vercel
-.vercel
-
+# ============================================
 # Build Outputs
+# ============================================
+# Next.js
 .next/
 out/
-build
-dist
 
+# General build directories
+build/
+dist/
 
-# Debug
+# ============================================
+# Turborepo
+# ============================================
+.turbo/
+
+# ============================================
+# Deployment
+# ============================================
+# Vercel
+.vercel/
+
+# ============================================
+# Testing & Coverage
+# ============================================
+coverage/
+.nyc_output/
+
+# ============================================
+# Debug & Logs
+# ============================================
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+pnpm-debug.log*
+*.log
+logs/
 
-# Misc
+# ============================================
+# IDE / Editor
+# ============================================
+# VSCode
+.vscode/
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+# PyCharm / IntelliJ
+.idea/
+
+# Vim
+*.swp
+*.swo
+*~
+
+# ============================================
+# OS Files
+# ============================================
+# macOS
 .DS_Store
-*.pem
+.AppleDouble
+.LSOverride
+._*
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Linux
+*~
+.directory
+
+# ============================================
+# Temporary Files
+# ============================================
+*.tmp
+*.temp
+.cache/
+tmp/
+temp/
+
+# ============================================
+# Package Manager Locks (keep only one)
+# ============================================
+package-lock.json
+yarn.lock
+
+
+## data
+data/*
+!data/.gitkeep
+!data/raw/.gitkeep
+!data/processed/.gitkeep
+!data/labels/.gitkeep
+!data/labels/test_coords.csv
