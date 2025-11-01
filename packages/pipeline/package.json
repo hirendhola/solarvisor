@@ -1,0 +1,13 @@
+{
+  "name": "@solarvisor/pipeline",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "build": "./scripts/build.sh",
+    "dev": "python3 -m src.main",
+    "test": "pytest tests/ -v",
+    "lint": "ruff check src/ || true",
+    "clean": "rm -rf dist/ build/ *.egg-info __pycache__ .pytest_cache .venv",
+    "setup": "./scripts/setup.sh"
+  }
+}

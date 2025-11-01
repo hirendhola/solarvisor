@@ -1,0 +1,9 @@
+{
+  "buffer_radius_meters": 20,
+  "watt_peak_per_sqm": 175,
+  "confidence_threshold": 0.75,
+  "qc_thresholds": {
+    "min_resolution_cm": 50,
+    "max_cloud_coverage_pct": 30
+  }
+}
